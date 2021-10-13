@@ -25,7 +25,7 @@ tags:
   
    > git clone git@github.com:owner/git.git
 
-## 一、HTTP 形式
+## HTTP 形式
 ### 走 HTTP 代理
 
 ```bash
@@ -47,7 +47,7 @@ git config --global --unset http.proxy
 git config --global --unset https.proxy
 ```
 
-## 二、SSH 形式
+## SSH 形式
 
 修改 `~/.ssh/config` 文件（不存在则新建）：
 
