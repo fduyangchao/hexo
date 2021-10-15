@@ -239,7 +239,7 @@ touch: file: Permission denied
 
 ```
 
-确实如猜测的那样，** `fsGroup`对`hostPath`挂载的存储卷并不生效**：业务进程有权限在`/emptydir`目录下创建文件（容器进程属于补充组ID 2000，`/emptydir`属于组ID 2000），却没有权限在`/mnt`目录下创建文件（容器进程`uid=1001, gid=1001, group=2000`，而`/mnt`属于`root:root`）
+确实如猜测的那样，`fsGroup`对`hostPath`挂载的存储卷并不生效：业务进程有权限在`/emptydir`目录下创建文件（容器进程属于补充组ID 2000，`/emptydir`属于组ID 2000），却没有权限在`/mnt`目录下创建文件（容器进程`uid=1001, gid=1001, group=2000`，而`/mnt`属于`root:root`）
 
 容器`hostPath`挂载路径的用户和组权限是不是跟着宿主机走呢？下面来验证。
 
@@ -248,11 +248,11 @@ touch: file: Permission denied
 ```
 [root@laptop]# groupadd -g 3000 host
 [root@laptop]# useradd -g host -u 3000 host
-[root@laptop]# chown -R 300:300 /tmp/mnt
+[root@laptop]# chown -R host:host /tmp/mnt
 [root@laptop]# ls -atl /tmp/mnt
 total 8
 drwxrwxrwt. 47 root root 4096 10月 15 16:48 ..
-drwxr-xr-x   2  300  300    6 10月 15 16:05 .
+drwxr-xr-x   2 host host    6 10月 15 16:05 .
 [root@laptop]# kubectl create -f pod.yaml 
 pod/demo created
 ```
@@ -276,7 +276,7 @@ drwxr-xr-x    1 root     root            66 Oct 15 09:23 etc
 drwxr-xr-x    2 root     root             6 Aug 27 11:05 home
 drwxr-xr-x    7 root     root           247 Aug 27 11:05 lib
 drwxr-xr-x    5 root     root            44 Aug 27 11:05 media
-drwxr-xr-x    2 300      abuild           6 Oct 15 08:05 mnt
+drwxr-xr-x    2 host     host             6 Oct 15 08:05 mnt
 drwxr-xr-x    2 root     root             6 Aug 27 11:05 opt
 dr-xr-xr-x  841 root     root             0 Oct 15 09:23 proc
 drwx------    2 root     root             6 Aug 27 11:05 root
@@ -300,7 +300,7 @@ touch: file: Permission denied
 
 在云平台中，使用最多的通过PVC接入的第三方存储卷，`fsGroup`对这类存储卷是否生效？
 
-类似地，创建一个带有PVC模板的StatefulSet
+类似地，创建一个带有PVC模板的`StatefulSet`
 
 ```
 apiVersion: apps/v1
