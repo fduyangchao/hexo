@@ -296,7 +296,7 @@ drwxr-xr-x   12 root     root           137 Aug 27 11:05 var
 touch: file: Permission denied
 ```
 
-**如设想的一样，容器内部挂载的路径`/mnt`也是`300:300`权限，继承宿主机目录。**
+**如设想的一样，容器内部挂载的路径`/mnt`也是`host:host`权限，继承宿主机目录。**
 
 在云平台中，使用最多的通过PVC接入的第三方存储卷，`fsGroup`对这类存储卷是否生效？
 
