@@ -243,7 +243,7 @@ touch: file: Permission denied
 
 容器`hostPath`挂载路径的用户和组权限是不是跟着宿主机走呢？下面来验证。
 
-将宿主机目录`/tmp/mnt`设置为`300:300`，再将该路径通过`hostPath`挂载到Pod中：
+将宿主机目录`/tmp/mnt`设置为`host:host`，再将该路径通过`hostPath`挂载到Pod中：
 
 ```
 [root@laptop]# groupadd -g 3000 host
