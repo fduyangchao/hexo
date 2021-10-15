@@ -239,7 +239,7 @@ touch: file: Permission denied
 
 ```
 
-确实如猜测的那样，**`fsGroup`对`hostPath`挂载的存储卷并不生效**：业务进程有权限在`/emptydir`目录下创建文件（容器进程属于补充组ID 2000，`/emptydir`属于组ID 2000），却没有权限在`/mnt`目录下创建文件（容器进程`uid=1001, gid=1001, group=2000`，而`/mnt`属于`root:root`）
+确实如猜测的那样，** `fsGroup`对`hostPath`挂载的存储卷并不生效**：业务进程有权限在`/emptydir`目录下创建文件（容器进程属于补充组ID 2000，`/emptydir`属于组ID 2000），却没有权限在`/mnt`目录下创建文件（容器进程`uid=1001, gid=1001, group=2000`，而`/mnt`属于`root:root`）
 
 容器`hostPath`挂载路径的用户和组权限是不是跟着宿主机走呢？下面来验证。
 
@@ -300,7 +300,7 @@ touch: file: Permission denied
 
 在云平台中，使用最多的通过PVC接入的第三方存储卷，`fsGroup`对这类存储卷是否生效？
 
-类似地，创建一个带有pvc模板的Statefulset
+类似地，创建一个带有PVC模板的StatefulSet
 
 ```
 apiVersion: apps/v1
@@ -398,11 +398,11 @@ drwxr-xr-x   12 root     root           137 Aug 27 11:05 var
 touch: file: Permission denied
 ```
 
-**综上，对于Pod挂载的存储卷，如果通过hostPath挂载，则fsGroup不生效，容器内部的挂载路径权限集成宿主机路径的权限；如果通过emptyDir或者PVC挂载，fsGroup生效。**
+**综上，对于Pod挂载的存储卷，如果通过hostPath挂载，则fsGroup不生效，容器内部的挂载路径继承成宿主机的权限；如果通过emptyDir或者PVC挂载，fsGroup生效。**
 
 ### PersitentVolume
 
-PV mountOptions或者 pv.beta.kubernetes.io/gid 注释，定义路径挂载时使用哪个用户组
+PV `mountOptions`或者 `pv.beta.kubernetes.io/gid` 注释，定义路径挂载时使用哪个用户组
 
 ### InitContainer
 
@@ -418,7 +418,7 @@ initContainers:
     mountPath: /mnt
 ```
 
-# 参考
+## 参考
 
 https://stackoverflow.com/questions/51390789/kubernetes-persistent-volume-claim-mounted-with-wrong-gid
 
