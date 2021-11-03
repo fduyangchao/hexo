@@ -16,18 +16,20 @@ categories:
 
 <!-- more -->
 
-### 1. vscode插件安装和使用方法
+### vscode插件安装和使用方法
 
 https://marketplace.visualstudio.com/items?itemName=okazuki.okazukiplantuml
 
 - `PlantUML Preview` : Start PlantUML preview.
 - `PlantUML Export ***(*** is format type)` : Export png, svg, eps, etc... to same directory.
 
-### 2. 使用文档
+### 使用文档
 
-PlantUML提供了丰富的关键词和语法，详见https://plantuml.com/zh/sequence-diagram 下面摘要出日常使用的几个基本功能：
+PlantUML提供了丰富的关键词和语法，详见https://plantuml.com/zh/sequence-diagram
 
-#### 2.1 基本用例
+下面摘要出日常使用的几个基本语法。
+
+#### 基本用例
 
 序列`->` 用于绘制两个 参与者之间的信息。 参与者不必明确声明。
 
@@ -49,9 +51,9 @@ http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBCoKnELT2rKt3AJx9IS2mjoKZDAyb
 
 
 
-#### 2.2 生命参与者
+#### 生命参与者
 
-##### 2.2.1 participant
+##### participant
 
 使用 `participant` 关键字来声明一个参与者可以使你对参与者做出更多控制。
 
@@ -89,7 +91,7 @@ Foo -> Foo7 : To queue
 
 http://www.plantuml.com/plantuml/uml/LP4n3iCW34Ltdu8BT6ZI95A7AbDFq0iuX069uXJCaDitmKdbCi3JVyBYYp4p9Yxl0CjsUkiNZ6mqOpPF8a3Bb8oiFwxw2XELE6DQzqop-0OiHKuKwXtDubjmaJslCbEp-1lCo3XXTdkcMNotpG_1MVOKiz4ileTFSSKTRzOiVe1jCvT7xMBkvaL7IPKtaf_bb6d57BMKk8cGFYhl93zxADEVetuDb1n4rkV3wEAy_ziN
 
-##### 2.2.2 as
+##### as
 
 关键字 `as` 用于重命名参与者
 
@@ -113,7 +115,7 @@ Bob->L: 记录事务日志
 
 http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuKfCBialKd3AJr9GBafDuL9NW0WydTIZK01KafcSMP2OLwBmj7_LqpahdYwPzc9vqvCTNS_cT3xjsVMqOpKNiYB7dCpaL1GHfQVxEbvEtOzCnkGzdzNoT4BlqxNJbHGIYnLy59GjBTtSB2svzDKLdkoS_xH__PFTIr_id_bimVQdYpSycz7tViyiBWK55EVuW7GICXnki8A2kZuN5zXrkdP0hrefl5YtvCNwnXVhjp_RsCG55D6r0yl299vExdswQmf4mWSakE7ftgbFTdK_xLhuRFhIf_kdSpcavgM0WWy0
 
-##### 2.2.3 order
+##### order
 
 您可以使用关键字 `order`自定义顺序来打印参与者。
 
@@ -127,7 +129,7 @@ participant 首个 order 10
 
 http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuIe0qfd9cGM9UIKAp-OqF9tGfv1Vb99Qf61iW2BtPCVQbzEtGEMCKELUBflsPCSgg9oX0PT3QbuAo6m0
 
-#### 2.3 箭头样式
+#### 箭头样式
 
 修改箭头样式的方式有以下几种:
 
@@ -157,9 +159,9 @@ Bob <->o Alice
 
 http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBAJrBGjQjGSCp9J4w5yb0uABmO94vCZ2uIJrzV5yQ5Qin7aiq7AaQHja6nnGQXsY4rBmNaBW00
 
-#### 2.4 对消息序列编号
+#### 对消息序列编号
 
-##### 2.4.1 autonumber
+##### autonumber
 
 关键字 `autonumber` 用于自动对消息编号。
 
@@ -184,9 +186,9 @@ Bob <- Alice : Yet another authentication Response
 
 http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuKeiBSdFAyrDIYtYSifFKj2rKt3CoKnELR1IS2mjoKZDAybCJYp9pCzJ24ejB4qjBW6hij75hQgu83-lE9KBoM05GrCCi_FoWTgA51A9imENQYnscHWe61gWMnUPMgAGI9ALU7N0h7L8pKi1XI40
 
-#### 2.5 分隔示意图
+#### 分隔示意图
 
-##### 2.5.1 newpage
+##### newpage
 
 关键字 `newpage` 用于把一张图分割成多张。
 
@@ -214,7 +216,7 @@ Alice -> Bob : message 6
 
 http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuU9opCbCJbNGjLDmoazIi5B8JIqkJanFLJ349M74nPMNMbu0PEBKQunBmWIkLy5HeIIp92TL8Is_IA4a8pKcBoUnk4G1hx6ck2JCk1nIyr90lW40
 
-#### 2.6 组合消息
+#### 组合消息
 
 我们可以通过以下关键词来组合消息：
 
@@ -257,7 +259,7 @@ end
 
 http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBCoKnELT2rKt3AJx9IUB5koOlrZI_MRt-siOcBAp6dHE5PnuIdNVEVDRS-RTlAnQK014258FLWZJ0Tp_gMFksVpiMLcbESgl1i_eJdotkVBjduOijIGXeXgi3IwKNvfGL0-oQ-Q5_rTFl6vxDQdYreVxvs7rWIxaoV_7G5AuMdUngUBkz-iMx3qxrJdqtP_RHzzxFfIv_kdmvM2m8v-Va52eO61WRFrYo42w8O1FQlYr-m0aG_N55gNWes6v_ldlnixdmSDeBqGFp-j7_PanqDSE-3FOxcx_NRNxO3fNk1Ee3Q7804A1u0
 
-#### 2.7 次级分组标签
+#### 次级分组标签
 
 对于`group`而言，在标头处的`[`和`]`之间可以显示次级文本或标签。
 
@@ -277,7 +279,7 @@ end
 
 http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBCoKnELT2rKt3AJx9IUB5koOlrZI_MRt-siOaBA0AI0Ak0IJrTil75bgLSwKNvfGKAppeclcXVzNJxnkUpMfujQ7--Tfz2DAQOKIoN0X30BVB9JrUmKdYwf-7fykuNwpOytJlrsPJTJzjtFvk-zEd-wM2rEVdv1Gg61WO6pzOi10kW601sgOjVC4GRM3urBmMR9SztJtusTpuMIq3g7O04A0G0
 
-#### 2.8 信息注释
+#### 信息注释
 
 可以使用`note left` 或`note right` 关键字*在信息后面*加上注释。
 
@@ -302,7 +304,7 @@ end note
 
 http://www.plantuml.com/plantuml/uml/JOz13iCW30JlViL-81_88KfxwpESO0AAOoIWVN-X71h91sizevNNKZdNzwNqqBZBj3pJXXb1L1DPgW8LNsVK40lQC7pCfQAVY1eyBJ-nEUaSGev7k1ij39BlnkXuWQzEsHdj-7SH3tHd0sj9s0HEV3Hnb0n5Ff9PeIqe9EO6lRQjV_45
 
-#### 2.9 分隔符
+#### 分隔符
 
 你可以通过使用`==`关键词来将你的图表分割成多个逻辑步骤。
 
@@ -324,7 +326,7 @@ Alice <-- Bob: 认证响应
 
 http://www.plantuml.com/plantuml/uml/SoWkIImgAStDuUAojLLusZ7twVBkfptJ56njkRWSSpAJKnLqxHISyfEi55wiM_9YVUEBzTkVRMpY0eeew09bm4fWSaydzpxTDGLiqClstgTBUWcP0f6oqTL5beEPuf2Qbm9o5m00
 
-#### 2.10 生命线的激活与撤销
+#### 生命线的激活与撤销
 
 关键字`activate`和`deactivate`用来表示参与者的生命活动。
 
@@ -360,7 +362,7 @@ deactivate A
 
 http://www.plantuml.com/plantuml/uml/POzH2iCW38RVSufSe1SeHQhs18EnPz4yo3RjD1tqzZDsiC9U4iZ_vykVkR8hl3qViBOUVLnTOhnMAW1ISL2eHrpoBPSxEC_nxPXG0sYHp8ZJXBvG6rxejL5bLEhdCm16VFOVOS7YS214M78Y26s_vBrfidQS_c9jln6QvGpl8IIdy3lW776c5EIr3m00
 
-### 3. 练手环节
+### 练手环节
 
 使用vscode PlantUML插件，画出Pod创建过程中，各组件之间的交互逻辑
 
