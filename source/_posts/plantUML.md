@@ -20,8 +20,13 @@ categories:
 
 https://marketplace.visualstudio.com/items?itemName=okazuki.okazukiplantuml
 
-- `PlantUML Preview` : Start PlantUML preview.
-- `PlantUML Export ***(*** is format type)` : Export png, svg, eps, etc... to same directory.
+- `F1`唤起vscode命令行操作
+
+- `PlantUML: Preview Current Diagram` : Start PlantUML preview.
+- `PlantUML: Export Current Diagram -> ***(*** is format type)` : Export png, svg, eps, etc... to same directory.
+- `PlantUML: Extract PlantUML Diagram Source from Image`: 将图片还原成plantUML代码，实测时灵时不灵
+
+
 
 ### 使用文档
 
