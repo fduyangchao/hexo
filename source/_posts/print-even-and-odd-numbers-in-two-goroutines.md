@@ -8,6 +8,8 @@ categories:
 tags:
   - golang
   - 算法
+index_img: https://cdn.jsdelivr.net/gh/simonyangchao/resources@image/golang-5.png
+banner_img: https://cdn.jsdelivr.net/gh/simonyangchao/resources@image/golang-5.png
 ---
 
 之前面试被问到过一个比较简单的进程同步场景：如何使用两个进程（golang就是两个go routine) 交叉打印1-100这100个数字。在作为面试官的时候也问过候选人这个问题，但是没有深入总结过这个问题有多少解决方案。本文主要记录一下分析过程。

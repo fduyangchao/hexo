@@ -1,6 +1,6 @@
 ---
 layout: title
-title: golang常用包系列（一）&#58 resource
+title: "golang常用包系列: resource"
 date: 2021-11-04 14:06:44
 tags:
   - golang
@@ -9,6 +9,8 @@ categories:
   - 专业
   - 开发
   - golang
+index_img: https://cdn.jsdelivr.net/gh/simonyangchao/resources@image/golang-1.png
+banner_img: https://cdn.jsdelivr.net/gh/simonyangchao/resources@image/golang-1.png
 ---
 
 # 简介

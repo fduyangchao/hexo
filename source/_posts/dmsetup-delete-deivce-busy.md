@@ -9,6 +9,8 @@ tags:
   - Linux
   - devicemapper
   - storage
+index_img: https://cdn.jsdelivr.net/gh/simonyangchao/resources@image/linux.jpeg
+banner_img: https://cdn.jsdelivr.net/gh/simonyangchao/resources@image/linux.jpeg
 ---
 
 

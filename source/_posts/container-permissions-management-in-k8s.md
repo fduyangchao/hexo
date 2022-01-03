@@ -9,6 +9,8 @@ categories:
   - 专业
   - 开发
   - Kubernetes
+index_img: https://cdn.jsdelivr.net/gh/simonyangchao/resources@image/k8s-psp.png
+banner_img: https://cdn.jsdelivr.net/gh/simonyangchao/resources@image/k8s-psp.png
 ---
 
 开源项目部署后，如果升级镜像版本，有时会出现容器内部权限不足，导致业务进程无法读写文件。本文从容器和文件系统两个角度出发，总结容器镜像和Kubernetes如何控制并配置业务权限。

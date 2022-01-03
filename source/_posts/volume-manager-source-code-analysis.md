@@ -9,6 +9,8 @@ tags:
   - Kubernetes
   - 云原生
   - golang
+index_img: https://cdn.jsdelivr.net/gh/simonyangchao/resources@image/kubernetes.jpeg
+banner_img: https://cdn.jsdelivr.net/gh/simonyangchao/resources@image/kubernetes.jpeg
 ---
 工作中需要调研k8s存储插件从in-tree模式平滑升级到CSI的可行性，因此对Kubelet中的Volume Manager模块进行源码分析，期望在全面理解代码逻辑和设计思路的前提下，避免采坑。按照一贯的思路和习惯，从接口、数据结构、函数/方法三个方面入手。
 

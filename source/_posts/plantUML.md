@@ -10,6 +10,8 @@ categories:
   - 工具
   - 编辑器
   - PlantUML
+index_img: https://cdn.jsdelivr.net/gh/simonyangchao/resources@image/tools.png
+banner_img: https://cdn.jsdelivr.net/gh/simonyangchao/resources@image/tools.png
 ---
 
 发现一个在线画时序图的工具PlantUML，该工具提供vscode插件，可以使用代码编辑时序图逻辑，并实时预览。

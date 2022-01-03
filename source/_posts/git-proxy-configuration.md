@@ -8,6 +8,8 @@ tags:
   - git
   - github
   - ssh
+index_img: https://cdn.jsdelivr.net/gh/simonyangchao/resources@image/github.png
+banner_img: https://cdn.jsdelivr.net/gh/simonyangchao/resources@image/github.png
 ---
 
 ## 解决问题
