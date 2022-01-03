@@ -9,6 +9,8 @@ categories:
   - 专业
   - 开发
   - 存储
+index_img: https://cdn.jsdelivr.net/gh/simonyangchao/resources@image/cloud-storage.png
+banner_img: https://cdn.jsdelivr.net/gh/simonyangchao/resources@image/Cloud-Computing-in-Construction-Trends.jpeg
 ---
 
 在大数据上云的背景下，云上存储，或者说云原生存储，成为了公有云和私有云都无法绕过的话题。针对者三种存储后端，网络上有不少描述的文章，但大多是泛泛阐述使用场景、性能和罗列概念。本文将以比较“人话”的方式，讨论三者之间的本质区别。
